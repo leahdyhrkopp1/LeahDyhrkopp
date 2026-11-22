@@ -561,3 +561,4 @@ code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.85em
   .viz-body-side { grid-template-columns: 1fr; }
   .viz-card { padding: 20px; }
 }
+.contact h2 { margin-bottom: 36px; }
