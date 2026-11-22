@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect width="1280" height="720" fill="#efe4d0"/>
+<rect x="56" y="48" width="1168" height="624" rx="22" fill="#fbf7ef" stroke="#ddcfb9"/>
+<text x="96" y="112" font-family="Georgia, serif" font-size="34" fill="#3a0c16">Executive Overview</text>
+<text x="96" y="142" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#6b5a5c">Graduate admissions · Alteryx + Tableau</text>
+<rect x="96" y="170" width="248" height="96" rx="12" fill="#f6efe2" stroke="#e8dcc8"/>
+<text x="116" y="222" font-family="Georgia, serif" font-size="38" fill="#3a0c16">3,045</text>
+<text x="116" y="250" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#6b5a5c">Applicants</text>
+<rect x="368" y="170" width="248" height="96" rx="12" fill="#f6efe2" stroke="#e8dcc8"/>
+<text x="388" y="222" font-family="Georgia, serif" font-size="38" fill="#3a0c16">59</text>
+<text x="388" y="250" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#6b5a5c">Countries</text>
+<rect x="640" y="170" width="248" height="96" rx="12" fill="#f6efe2" stroke="#e8dcc8"/>
+<text x="660" y="222" font-family="Georgia, serif" font-size="38" fill="#3a0c16">293</text>
+<text x="660" y="250" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#6b5a5c">Matriculated</text>
+<rect x="912" y="170" width="248" height="96" rx="12" fill="#f6efe2" stroke="#e8dcc8"/>
+<text x="932" y="222" font-family="Georgia, serif" font-size="38" fill="#3a0c16">$71K</text>
+<text x="932" y="250" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#6b5a5c">Avg salary</text>
+<text x="96" y="312" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#3a0c16">Applicants by country</text>
+<text x="206" y="349" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">China</text>
+<path d="M218,334H574.0Q578.0,334 578.0,338V350Q578.0,354 574.0,354H218Z" fill="#6e1a2b"/>
+<text x="206" y="391" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">India</text>
+<path d="M218,376H361.66016713091926Q365.66016713091926,376 365.66016713091926,380V392Q365.66016713091926,396 361.66016713091926,396H218Z" fill="#6e1a2b"/>
+<text x="206" y="433" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">United States</text>
+<path d="M218,418H338.59610027855155Q342.59610027855155,418 342.59610027855155,422V434Q342.59610027855155,438 338.59610027855155,438H218Z" fill="#6e1a2b"/>
+<text x="206" y="475" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">Taiwan</text>
+<path d="M218,460H225.28133704735376Q229.28133704735376,460 229.28133704735376,464V476Q229.28133704735376,480 225.28133704735376,480H218Z" fill="#6e1a2b"/>
+<text x="206" y="517" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">Nigeria</text>
+<path d="M218,502H223.52646239554318Q227.52646239554318,502 227.52646239554318,506V518Q227.52646239554318,522 223.52646239554318,522H218Z" fill="#6e1a2b"/>
+<text x="206" y="559" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">Pakistan</text>
+<path d="M218,544H221.01949860724233Q225.01949860724233,544 225.01949860724233,548V560Q225.01949860724233,564 221.01949860724233,564H218Z" fill="#6e1a2b"/>
+<text x="206" y="601" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">South Korea</text>
+<path d="M218,586H218.76323119777157Q222.76323119777157,586 222.76323119777157,590V602Q222.76323119777157,606 218.76323119777157,606H218Z" fill="#6e1a2b"/>
+<text x="680" y="312" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#3a0c16">Starting salary by industry</text>
+<text x="850" y="349" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">Marketing</text>
+<path d="M862,334H1169.6666666666667Q1173.6666666666667,334 1173.6666666666667,338V350Q1173.6666666666667,354 1169.6666666666667,354H862Z" fill="#c4949d"/>
+<text x="850" y="391" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">Financial Services</text>
+<path d="M862,376H1140.973544973545Q1144.973544973545,376 1144.973544973545,380V392Q1144.973544973545,396 1140.973544973545,396H862Z" fill="#6e1a2b"/>
+<text x="850" y="433" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">Entertainment</text>
+<path d="M862,418H1133.0Q1137.0,418 1137.0,422V434Q1137.0,438 1133.0,438H862Z" fill="#c4949d"/>
+<text x="850" y="475" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">Oil &amp; Energy</text>
+<path d="M862,460H1129.7916666666665Q1133.7916666666665,460 1133.7916666666665,464V476Q1133.7916666666665,480 1129.7916666666665,480H862Z" fill="#c4949d"/>
+<text x="850" y="517" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">Health care</text>
+<path d="M862,502H1127.2608695652175Q1131.2608695652175,502 1131.2608695652175,506V518Q1131.2608695652175,522 1127.2608695652175,522H862Z" fill="#6e1a2b"/>
+<text x="850" y="559" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">Travel &amp; Transportation</text>
+<path d="M862,544H1126.5047619047618Q1130.5047619047618,544 1130.5047619047618,548V560Q1130.5047619047618,564 1126.5047619047618,564H862Z" fill="#6e1a2b"/>
+<text x="850" y="601" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3a0c16">Food &amp; Beverage</text>
+<path d="M862,586H1124.095238095238Q1128.095238095238,586 1128.095238095238,590V602Q1128.095238095238,606 1124.095238095238,606H862Z" fill="#6e1a2b"/>
+<line x1="1123.745" x2="1123.745" y1="326" y2="628" stroke="#8a6a3a" stroke-width="2" stroke-dasharray="5 5"/>
+</svg>
