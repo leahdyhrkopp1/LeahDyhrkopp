@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Graduate Admissions Executive Dashboard · Leah Dyhrkopp</title>
-  <meta name="description" content="An Alteryx and Tableau dashboard of a graduate program's applicant pipeline, rebuilt as an interactive web version.">
+  <meta name="description" content="An Alteryx and Tableau dashboard of a graduate program’s applicant pipeline, with an interactive web version.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#experience">Experience</a></li>
         <li><a href="index.html#work" aria-current="page">Work</a></li>
-        <li><a href="index.html#coursework">Coursework</a></li>
+        <li><a href="index.html#courses">Courses</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -37,13 +37,13 @@
     <section class="project-hero">
       <div class="wrap">
         <a class="back-link" href="index.html#work">← All work</a>
-        <p class="eyebrow">Case study · Data Visualization</p>
+        <p class="eyebrow">Case study · Data Visualization and Communication</p>
         <h1>Graduate Admissions <em class="serif-italic">Executive Dashboard</em></h1>
-        <p class="lede">For my data visualization final, I took a raw admissions dataset I had never seen before, cleaned and prepared it in Alteryx, and built a one-page Tableau dashboard that answers three questions a program director would ask: who is applying, how far do they get, and what do graduates earn?</p>
+        <p class="lede">For my data visualization final, I was handed a raw admissions dataset I had never seen before. I cleaned it up in Alteryx and built a one-page Tableau dashboard that answers the three questions a program director would ask first: Who is applying? How far do they get? What do graduates earn?</p>
         <dl class="meta-row">
-          <div><dt>Course</dt><dd>Data Visualization, M.S. AI for Business</dd></div>
+          <div><dt>Course</dt><dd>Data Visualization and Communication (ITOM 6212)</dd></div>
           <div><dt>Tools</dt><dd>Alteryx · Tableau</dd></div>
-          <div><dt>Data</dt><dd>3,000+ applicant records from 59 countries</dd></div>
+          <div><dt>Data</dt><dd>3,000+ applicants from 59 countries</dd></div>
           <div><dt>When</dt><dd>October 2026</dd></div>
         </dl>
       </div>
@@ -52,28 +52,28 @@
     <section class="section">
       <div class="wrap">
         <div class="split reveal">
-          <div class="split-label">The brief</div>
+          <div class="split-label">The assignment</div>
           <div class="prose">
-            <p>The final gave us a new dataset with no warning about what it would contain: thousands of applicant records with each person’s status, country of origin, test scores and, for graduates, where they were hired and what they were paid. The task was to turn that into something leadership could read in under a minute.</p>
-            <p>I designed for one reader, a program director deciding where to recruit and how to talk about outcomes, and built every view to answer one of their questions.</p>
+            <p>The final gave us a brand-new dataset with no preview of what was inside: thousands of applicant records with each person’s status, country of origin and test scores, plus where graduates were hired and what they were paid. Our job was to turn all of that into something leadership could understand in under a minute.</p>
+            <p>I pictured one reader, a program director deciding where to recruit and how to talk about outcomes, and made sure every chart answered one of their questions.</p>
           </div>
         </div>
 
         <div class="split reveal">
-          <div class="split-label">How I built it</div>
+          <div class="split-label">What I did</div>
           <div>
             <ol class="steps">
               <li>
-                <h4>Prepare in Alteryx</h4>
-                <p>Built a workflow to clean and organize the raw Excel data into a single analysis-ready table for Tableau.</p>
+                <h4>Prepared the data in Alteryx</h4>
+                <p>I built a workflow to clean and organize the raw Excel data into one table that was ready for Tableau.</p>
               </li>
               <li>
-                <h4>Model in Tableau</h4>
-                <p>Counted unique applicants with <code>COUNTD([Student ID])</code>, grouped final decisions into an “Applied” bucket, and added a parameter that switches salary between mean and median.</p>
+                <h4>Modeled it in Tableau</h4>
+                <p>I counted unique applicants with <code>COUNTD([Student ID])</code>, grouped final decisions together and added a switch between mean and median salary.</p>
               </li>
               <li>
-                <h4>Design the dashboard</h4>
-                <p>Combined a map of origin countries, an applicant-status chart and salary by industry with an average reference line, and connected them with a filter action so clicking a country updates everything.</p>
+                <h4>Designed the dashboard</h4>
+                <p>I combined a map of applicants’ home countries, an applicant status chart and salary by industry, then linked them so clicking a country filters everything.</p>
               </li>
             </ol>
           </div>
@@ -86,8 +86,8 @@
         <div class="section-head reveal">
           <div class="section-num">Try it</div>
           <div>
-            <h2>The dashboard, <em class="serif-italic">rebuilt for the web.</em></h2>
-            <p>I rebuilt this from the workbook’s own data so it works in any browser. It keeps the original’s interactions: click a country to filter the other views, and switch salary between mean and median.</p>
+            <h2>Explore the dashboard <em class="serif-italic">two ways.</em></h2>
+            <p>First is a version I rebuilt from the workbook’s own data so it loads quickly on any device. Click a country to filter the other charts, or switch salary between mean and median. The original Tableau dashboard is right below it.</p>
           </div>
         </div>
 
@@ -143,14 +143,17 @@
           </details>
         </div>
 
-        <!--
-          OPTIONAL: embed the original Tableau dashboard too.
-          1. Open the workbook in Tableau Public and choose File > Save to Tableau Public.
-          2. On the published viz, click Share and copy the Embed Code.
-          3. Replace the .embed-slot div below with that embed code.
-        -->
-        <div class="embed-slot reveal" style="margin-top:28px">
-          The original Tableau version will be on <a href="https://public.tableau.com/" target="_blank" rel="noopener">Tableau Public</a> soon.
+        <div class="tableau-original reveal" id="tableau-original">
+          <div class="to-head">
+            <div>
+              <h3>The original in Tableau</h3>
+              <p>This is the dashboard exactly as I submitted it, published on Tableau Public. Click a country on the map to filter the other charts.</p>
+            </div>
+            <a class="btn btn-ghost" href="https://public.tableau.com/app/profile/leah.dyhrkopp/viz/Final_LD/ExecutiveOverview" target="_blank" rel="noopener">Open on Tableau Public <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="tableau-frame">
+            <iframe src="https://public.tableau.com/views/Final_LD/ExecutiveOverview?:embed=y&amp;:showVizHome=no&amp;:display_count=n&amp;:tabs=n&amp;:toolbar=bottom" title="Graduate Admissions Executive Overview, Tableau Public dashboard" loading="lazy" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -158,22 +161,22 @@
     <section class="section">
       <div class="wrap">
         <div class="split reveal">
-          <div class="split-label">What it shows</div>
+          <div class="split-label">What I found</div>
           <div>
             <ul class="findings">
-              <li><span class="big">51%</span><p><strong>One country dominates the pipeline.</strong> Of applicants with a recorded country, 1,436 came from China, more than India (589) and the U.S. (497) combined. The program’s outcomes depend heavily on one recruiting market.</p></li>
-              <li><span class="big">17.5%</span><p><strong>Few final decisions end in enrollment.</strong> Of 1,673 applicants who reached a final outcome, 293 enrolled. About half were denied, and 519 (31%) withdrew, which suggests the program is losing admitted students.</p></li>
+              <li><span class="big">51%</span><p><strong>One country dominates the pipeline.</strong> Of the applicants with a recorded country, 1,436 came from China, more than India (589) and the U.S. (497) combined. That means the program’s results depend heavily on a single recruiting market.</p></li>
+              <li><span class="big">17.5%</span><p><strong>Few final decisions end in enrollment.</strong> Of the 1,673 applicants who reached a final outcome, 293 enrolled. About half were denied, and 519 (31%) withdrew, which is a lot of interest the program loses along the way.</p></li>
               <li><span class="big">$71K</span><p><strong>Graduates land solid salaries.</strong> Across 381 placements, the average starting salary was $71,385 (median $70,000). Consulting hired the most graduates (131) at about $70K, and financial services paid the most among industries with 20+ hires, at about $77K.</p></li>
-              <li><span class="big">n = 4</span><p><strong>Why the median toggle matters.</strong> Marketing shows the highest average salary ($85K), but it comes from only four people. Switching to the median and flagging small samples keeps a few outliers from distorting the story.</p></li>
+              <li><span class="big">n = 4</span><p><strong>Averages can mislead.</strong> Marketing shows the highest average salary ($85K), but that number comes from just four people. Offering the median and flagging small samples keeps a few outliers from skewing the story.</p></li>
             </ul>
           </div>
         </div>
 
         <div class="split reveal">
-          <div class="split-label">What I took away</div>
+          <div class="split-label">What I learned</div>
           <div class="prose">
-            <p>A dashboard is only useful if its reader trusts it. Small choices like counting <em>unique</em> applicants, offering a median next to the mean and showing how many people stand behind each bar are what separate a chart that looks good from one you can make decisions with.</p>
-            <!-- EDIT: add a sentence in your own voice about the experience of building this under exam conditions -->
+            <p>A dashboard only helps if the person reading it trusts it. Small choices, like counting <em>unique</em> applicants, offering a median next to the mean and showing how many people stand behind each bar, are what turn a nice-looking chart into one you can actually make decisions with.</p>
+            <p>Working with a dataset I’d never seen, on a clock, also taught me to slow down at the start. Knowing exactly what each column meant before building anything saved me from charts that looked right but weren’t.</p>
           </div>
         </div>
 

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800">
+<rect width="1280" height="800" fill="#efe4d0"/>
+<rect x="70" y="60" width="1140" height="680" rx="24" fill="#fbf7ef" stroke="#ddcfb9"/>
+<text x="120" y="140" font-family="Georgia, serif" font-size="40" fill="#3a0c16">Which AI tool, when?</text>
+<text x="420" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#3a0c16">ChatGPT</text>
+<text x="610" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#3a0c16">Gemini</text>
+<text x="800" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#3a0c16">AI Mode</text>
+<text x="990" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#3a0c16">NotebookLM</text>
+<line x1="120" x2="1160" y1="276.0" y2="276.0" stroke="#e8dcc8"/>
+<text x="120" y="258" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#2b1b1e">Advice</text>
+<circle cx="420" cy="250" r="18" fill="none" stroke="#ddcfb9" stroke-width="2" stroke-dasharray="4 5"/>
+<circle cx="610" cy="250" r="20" fill="#dcc6c1"/>
+<circle cx="800" cy="250" r="20" fill="#dcc6c1"/>
+<circle cx="990" cy="250" r="18" fill="none" stroke="#ddcfb9" stroke-width="2" stroke-dasharray="4 5"/>
+<line x1="120" x2="1160" y1="368.0" y2="368.0" stroke="#e8dcc8"/>
+<text x="120" y="350" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#2b1b1e">Sources</text>
+<circle cx="420" cy="342" r="20" fill="#6e1a2b"/>
+<circle cx="610" cy="342" r="20" fill="#dcc6c1"/>
+<circle cx="800" cy="342" r="20" fill="#dcc6c1"/>
+<circle cx="990" cy="342" r="18" fill="none" stroke="#ddcfb9" stroke-width="2" stroke-dasharray="4 5"/>
+<line x1="120" x2="1160" y1="460.0" y2="460.0" stroke="#e8dcc8"/>
+<text x="120" y="442" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#2b1b1e">Documents</text>
+<circle cx="420" cy="434" r="20" fill="#dcc6c1"/>
+<circle cx="610" cy="434" r="20" fill="#dcc6c1"/>
+<circle cx="800" cy="434" r="18" fill="none" stroke="#ddcfb9" stroke-width="2" stroke-dasharray="4 5"/>
+<circle cx="990" cy="434" r="20" fill="#6e1a2b"/>
+<line x1="120" x2="1160" y1="552.0" y2="552.0" stroke="#e8dcc8"/>
+<text x="120" y="534" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#2b1b1e">Personal</text>
+<circle cx="420" cy="526" r="20" fill="#dcc6c1"/>
+<circle cx="610" cy="526" r="20" fill="#dcc6c1"/>
+<circle cx="800" cy="526" r="20" fill="#dcc6c1"/>
+<circle cx="990" cy="526" r="18" fill="none" stroke="#ddcfb9" stroke-width="2" stroke-dasharray="4 5"/>
+<line x1="120" x2="1160" y1="644.0" y2="644.0" stroke="#e8dcc8"/>
+<text x="120" y="626" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#2b1b1e">Pushback</text>
+<circle cx="420" cy="618" r="20" fill="#dcc6c1"/>
+<circle cx="610" cy="618" r="20" fill="#dcc6c1"/>
+<circle cx="800" cy="618" r="20" fill="#dcc6c1"/>
+<circle cx="990" cy="618" r="18" fill="none" stroke="#ddcfb9" stroke-width="2" stroke-dasharray="4 5"/>
+</svg>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Building an AI Interview Coach · Leah Dyhrkopp</title>
+  <meta name="description" content="A no-code chatbot built in Chatling that gives business analyst candidates practice questions and feedback on their answers.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">LD</span>
+        <span class="brand-name">Leah Dyhrkopp</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#work" aria-current="page">Work</a></li>
+        <li><a href="index.html#courses">Courses</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="project-hero">
+      <div class="wrap">
+        <a class="back-link" href="index.html#work">← All work</a>
+        <p class="eyebrow">Case study · Generative AI for Business</p>
+        <h1>Building an AI <em class="serif-italic">Interview Coach</em></h1>
+        <p class="lede">For my third Generative AI lab, I built two chatbots in Chatling, a no-code AI platform. The first added a personal touch to a class demo for prospective students. The second was my own idea: a practice interviewer for students like me who are getting ready for business analyst interviews.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://share.chatling.ai/s/rKzu4Kw24UMzp4b" target="_blank" rel="noopener">Try the interview coach <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <dl class="meta-row">
+          <div><dt>Course</dt><dd>Generative AI for Business (ITOM 6216)</dd></div>
+          <div><dt>Tool</dt><dd>Chatling (no-code)</dd></div>
+          <div><dt>Built</dt><dd>Two chatbots</dd></div>
+          <div><dt>When</dt><dd>November 2026</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="split reveal">
+          <div class="split-label">The assignment</div>
+          <div class="prose">
+            <p>First, we rebuilt a class demo chatbot that answers prospective students’ questions about the program and added one feature of our own. Then we designed a second chatbot from scratch for a use case we chose, complete with a knowledge base and custom instructions.</p>
+          </div>
+        </div>
+
+        <div class="split reveal">
+          <div class="split-label">Chatbot 1</div>
+          <div class="prose">
+            <h2>Meeting students <em class="serif-italic">where they are.</em></h2>
+            <p>The demo chatbot asked prospective students when they planned to enroll but never used the answer. I added a branch that does. If a student picks “Not sure,” the bot suggests an information session or a conversation with an admissions advisor before moving on to their questions. Students who already know their start term go straight to “How may I help you?”</p>
+            <p>It’s a small change, but it makes the conversation respond to where each person is in their decision, without using any extra AI credits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-num">Chatbot 2</div>
+          <div>
+            <h2>A practice interviewer <em class="serif-italic">that coaches you.</em></h2>
+            <p>The Business Analyst Interview Prep Coach is a low-pressure way for M.S. AI for Business students to practice before the real thing.</p>
+          </div>
+        </div>
+
+        <ol class="steps reveal">
+          <li>
+            <h4>Ask for a practice question</h4>
+            <p>The coach pulls a real interview question from its knowledge base and explains why interviewers ask it.</p>
+          </li>
+          <li>
+            <h4>Get feedback on your answer</h4>
+            <p>Type an answer and the coach shares what worked, one to three improvements, a stronger example answer and a likely follow-up question.</p>
+          </li>
+          <li>
+            <h4>Ask for guidance</h4>
+            <p>Users can also ask what skills interviewers look for or what questions to ask at the end of an interview.</p>
+          </li>
+        </ol>
+
+        <div class="split reveal" style="margin-top:72px">
+          <div class="split-label">How I built it</div>
+          <div class="prose">
+            <ul>
+              <li><strong>A focused knowledge base.</strong> The coach’s answers come from Final Round AI’s guide to the 25 most common entry-level business analyst interview questions.</li>
+              <li><strong>Clear instructions.</strong> I wrote five instructions that set the coach’s tone, the order of its feedback and when to suggest the STAR method (Situation, Task, Action, Result), which we learned in Managing Your Career.</li>
+              <li><strong>Connections to our program.</strong> The coach helps users tie their answers to skills from the program, like data analysis, visualization, Excel and SQL, and responsible AI.</li>
+              <li><strong>Guardrails.</strong> If a question falls outside its knowledge base or isn’t about interview prep, the coach says so and redirects.</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="figure-wide reveal" style="margin-top:56px">
+          <img src="chatbot-canvas.jpg" alt="Chatling builder canvas for the interview coach, showing the welcome message, user input, AI response and fallback blocks connected in a loop" loading="lazy">
+          <figcaption><strong>The conversation flow.</strong> A welcome message with quick-reply buttons leads into a loop, so users can keep practicing as long as they want.</figcaption>
+        </figure>
+
+        <div class="figure-row reveal" style="margin-top:28px">
+          <figure class="figure-wide">
+            <img src="chatbot-instructions.jpg" alt="Chatling instructions panel listing the coach’s custom instructions" loading="lazy">
+            <figcaption><strong>Custom instructions.</strong> These keep the coach encouraging, concise and focused on interview prep.</figcaption>
+          </figure>
+          <figure class="figure-wide">
+            <img src="chatbot-knowledge.jpg" alt="Chatling knowledge base page showing the Final Round AI interview guide as the coach’s source" loading="lazy">
+            <figcaption><strong>The knowledge base.</strong> One trusted source keeps the coach’s questions and tips grounded.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="split reveal">
+          <div class="split-label">Try it</div>
+          <div class="prose">
+            <p>Open the coach and try one of these:</p>
+            <ul>
+              <li>Click <strong>Practice question</strong>, then type your answer to get feedback.</li>
+              <li>Ask, “How should I answer ‘How do you handle conflicting requirements from different stakeholders?’”</li>
+              <li>Share your answer to “Describe a time you used data to make a recommendation.”</li>
+            </ul>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://share.chatling.ai/s/rKzu4Kw24UMzp4b" target="_blank" rel="noopener">Try the interview coach <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="split reveal">
+          <div class="split-label">What I learned</div>
+          <div class="prose">
+            <p>A chatbot is only as good as the instructions and sources behind it. Most of my time went into deciding exactly what the coach should and shouldn’t do, and that planning is what made it feel helpful instead of generic.</p>
+            <p>Building it also showed me how much you can create without writing code. With a clear use case, a trustworthy source and well-written instructions, I could build a tool I’d actually use to prepare for my own interviews.</p>
+          </div>
+        </div>
+
+        <div class="next-project">
+          <span class="eyebrow" style="margin:0">Next project</span>
+          <a class="title" href="admissions-dashboard.html">Graduate Admissions Executive Dashboard →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span data-year>2026</span> Leah Dyhrkopp</span>
+      <a href="index.html#contact">Get in touch</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

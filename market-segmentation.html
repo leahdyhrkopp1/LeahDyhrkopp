@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Humanizing the Data: AI Customer Segmentation · Leah Dyhrkopp</title>
-  <meta name="description" content="Using generative AI to turn 100 customer records into four personas, with a targeting plan for each.">
+  <meta name="description" content="Using AI to turn 100 customer records into four personas, each with its own marketing plan.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#experience">Experience</a></li>
         <li><a href="index.html#work" aria-current="page">Work</a></li>
-        <li><a href="index.html#coursework">Coursework</a></li>
+        <li><a href="index.html#courses">Courses</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -38,12 +38,12 @@
       <div class="wrap">
         <a class="back-link" href="index.html#work">← All work</a>
         <p class="eyebrow">Case study · AI for Marketing</p>
-        <h1>Humanizing the data: <em class="serif-italic">AI customer segmentation</em></h1>
-        <p class="lede">In AI for Marketing, we learned to use AI to turn spreadsheets into people. I gave an AI model a file of 100 customers, guided it one step at a time and checked its work. The result was four customer personas, each with a clear plan for how to reach it.</p>
+        <h1>Humanizing the Data: <em class="serif-italic">AI Customer Segmentation</em></h1>
+        <p class="lede">In AI for Marketing, we learned how to use AI to “humanize the data,” turning rows in a spreadsheet into people a marketer can actually picture. Starting with a file of 100 customers, I ended up with four personas, each with its own plan for how to reach them.</p>
         <dl class="meta-row">
           <div><dt>Course</dt><dd>AI for Marketing (MKTG 6247)</dd></div>
-          <div><dt>Method</dt><dd>k-means clustering, k = 4</dd></div>
-          <div><dt>Tools</dt><dd>Generative AI · step-by-step prompting</dd></div>
+          <div><dt>Method</dt><dd>k-means clustering, four segments</dd></div>
+          <div><dt>Data</dt><dd>100 customers, six behavior measures</dd></div>
           <div><dt>When</dt><dd>October 2026</dd></div>
         </dl>
       </div>
@@ -52,22 +52,19 @@
     <section class="section">
       <div class="wrap">
         <div class="split reveal">
-          <div class="split-label">The idea</div>
+          <div class="split-label">The assignment</div>
           <div class="prose">
-            <p>A row of numbers (age, income, spending score, visits per month) doesn’t tell a marketer whom they’re talking to. “Humanizing the data” means finding the natural groups in those numbers and describing them as people, with habits and motivations a team can design for.</p>
-            <div class="callout">
-              <p><strong>My role:</strong> I directed the analysis. I broke the assignment into steps, prompted the AI through each one, questioned a result that could have been misleading, and interpreted what the segments mean for the business.</p>
-            </div>
+            <p>A row of numbers like age, income, spending score and visits per month doesn’t tell a marketer who they’re talking to. The goal was to use AI to find the natural groups hiding in those numbers, then describe each group as a person with habits and motivations a team could design for.</p>
           </div>
         </div>
 
         <div class="split reveal">
-          <div class="split-label">Method</div>
+          <div class="split-label">What I did</div>
           <div class="prose">
             <ul>
-              <li><strong>Clustered on behavior and demographics.</strong> The AI ran k-means with four clusters on six standardized numeric variables, including income, spending score, average order value, visits per month and recency.</li>
-              <li><strong>Profiled afterward.</strong> Gender, shopping channel and favorite categories were added only after clustering, to describe each group.</li>
-              <li><strong>Protected against leakage.</strong> The file included a column that was effectively an answer key. I had the AI confirm it was left out of the clustering and used only as a check afterward: 99 of 100 customers matched it.</li>
+              <li><strong>Found the groups.</strong> I used AI to run k-means clustering on six customer measures, including income, spending score, average order size, visits per month and how recently each person had bought something.</li>
+              <li><strong>Gave them personalities.</strong> Once the groups were set, I layered in gender, shopping channel and favorite product categories to describe who each segment really is.</li>
+              <li><strong>Checked the work.</strong> The file included a column that was basically an answer key, so I made sure it was left out of the clustering. Compared afterward, 99 of 100 customers matched it.</li>
             </ul>
           </div>
         </div>
@@ -97,11 +94,11 @@
               <dt>Visits / month</dt><dd>9.0</dd>
               <dt>Channel</dt><dd>86% online</dd>
             </dl>
-            <p class="buys">Buys gaming, beauty, apparel</p>
+            <p class="buys">Buys gaming, beauty and apparel</p>
           </article>
           <article class="segment reveal" style="--seg:#e87ba4">
             <h4>Fashion-Forward Professionals</h4>
-            <p class="persona">High value and high engagement</p>
+            <p class="persona">High value and highly engaged</p>
             <dl>
               <dt>Share</dt><dd>23%</dd>
               <dt>Avg age</dt><dd>37</dd>
@@ -111,7 +108,7 @@
               <dt>Visits / month</dt><dd>6.7</dd>
               <dt>Channel</dt><dd>70% online</dd>
             </dl>
-            <p class="buys">Buys health &amp; fitness, beauty, apparel</p>
+            <p class="buys">Buys health and fitness, beauty and apparel</p>
           </article>
           <article class="segment reveal" style="--seg:#008300">
             <h4>Affluent Premium Buyers</h4>
@@ -125,11 +122,11 @@
               <dt>Visits / month</dt><dd>3.5</dd>
               <dt>Channel</dt><dd>57% in-store</dd>
             </dl>
-            <p class="buys">Buys home décor, health &amp; fitness, electronics</p>
+            <p class="buys">Buys home décor, health and fitness, and electronics</p>
           </article>
           <article class="segment reveal" style="--seg:#eda100">
             <h4>Family Value Shoppers</h4>
-            <p class="persona">Routine, price-sensitive necessity buyers</p>
+            <p class="persona">Routine, price-conscious necessity buyers</p>
             <dl>
               <dt>Share</dt><dd>28%</dd>
               <dt>Avg age</dt><dd>43</dd>
@@ -139,7 +136,7 @@
               <dt>Visits / month</dt><dd>9.2</dd>
               <dt>Channel</dt><dd>61% in-store</dd>
             </dl>
-            <p class="buys">Buys kids, groceries, home décor, pets</p>
+            <p class="buys">Buys kids’ items, groceries, home décor and pet supplies</p>
           </article>
         </div>
       </div>
@@ -151,7 +148,7 @@
           <div class="section-num">The evidence</div>
           <div>
             <h2>What the plots <em class="serif-italic">revealed.</em></h2>
-            <p>Each dot is a customer; the large outlined marks are segment averages.</p>
+            <p>Each dot is a customer, and the large outlined marks are segment averages.</p>
           </div>
         </div>
 
@@ -162,7 +159,7 @@
               <span class="fig-num">Plot 1 · Spending score vs. income</span>
               <h4>Income doesn’t predict spending.</h4>
               <p>The lowest-income segment, Young Online Enthusiasts ($50K), has the highest spending score (83). Affluent Premium Buyers earn the most ($122K) but score only 61.</p>
-              <p><strong>So what:</strong> target on behavior, not income brackets alone.</p>
+              <p><strong>So what:</strong> Target people on how they behave, not just on their income bracket.</p>
             </figcaption>
           </div>
         </figure>
@@ -173,8 +170,8 @@
             <figcaption>
               <span class="fig-num">Plot 2 · Order value vs. visits</span>
               <h4>Frequency and basket size trade off.</h4>
-              <p>The segments that visit most (9+ times a month) spend the least per order ($62–$85). Affluent Premium Buyers visit 3.5 times a month but average $257 per order.</p>
-              <p><strong>The sweet spot:</strong> Fashion-Forward Professionals balance both, with 6.7 visits and $144 orders.</p>
+              <p>The segments that visit most (9+ times a month) spend the least per order ($62–$85). Affluent Premium Buyers visit 3.5 times a month but spend $257 per order on average.</p>
+              <p><strong>So what:</strong> Fashion-Forward Professionals hit the sweet spot, with 6.7 visits and $144 orders.</p>
             </figcaption>
           </div>
         </figure>
@@ -185,7 +182,8 @@
             <figcaption>
               <span class="fig-num">Plot 3 · Recency vs. spending score</span>
               <h4>One valuable segment is drifting away.</h4>
-              <p>Affluent Premium Buyers have the lowest recent-purchase score (2.8), which makes them a win-back priority. Family Value Shoppers buy recently (6.5) but score lowest on spending: routine, not impulse.</p>
+              <p>Affluent Premium Buyers have the lowest recent-purchase score (2.8), while Family Value Shoppers buy often (6.5) but score lowest on spending.</p>
+              <p><strong>So what:</strong> Win back the premium buyers, and treat family shoppers’ visits as routine rather than impulse.</p>
             </figcaption>
           </div>
         </figure>
@@ -195,25 +193,25 @@
     <section class="section section-alt">
       <div class="wrap">
         <div class="section-head reveal">
-          <div class="section-num">So what</div>
+          <div class="section-num">The plan</div>
           <div>
             <h2>From personas <em class="serif-italic">to a plan.</em></h2>
           </div>
         </div>
 
         <ul class="findings reveal">
-          <li><span class="big">01</span><p><strong>Segment on behavior.</strong> Income alone misleads: the lowest earners have the highest spending score.</p></li>
-          <li><span class="big">02</span><p><strong>Two growth levers.</strong> Grow basket size for frequent shoppers, and grow visit frequency for big-ticket buyers.</p></li>
-          <li><span class="big">03</span><p><strong>Channel follows age.</strong> The two younger segments shop mostly online (70–86%); the two older ones shop mostly in-store (57–61%).</p></li>
+          <li><span class="big">01</span><p><strong>Segment on behavior.</strong> Income alone is misleading, since the lowest earners have the highest spending score.</p></li>
+          <li><span class="big">02</span><p><strong>Pull two growth levers.</strong> Grow basket size for frequent shoppers, and grow visit frequency for big-ticket buyers.</p></li>
+          <li><span class="big">03</span><p><strong>Match the channel to the age group.</strong> The two younger segments shop mostly online (70–86%), and the two older ones shop mostly in-store (57–61%).</p></li>
         </ul>
 
         <div class="tbl-wrap reveal" style="margin-top:48px">
-          <table class="prompt-table">
+          <table class="info-table">
             <tr><th style="width:32%">Segment</th><th>How to reach them</th></tr>
-            <tr><td class="seg-name"><strong>Young Online Enthusiasts</strong></td><td>Grow the basket: social and mobile campaigns, bundles, free-shipping thresholds above the $62 average order.</td></tr>
-            <tr><td class="seg-name"><strong>Fashion-Forward Professionals</strong></td><td>Protect and grow: a loyalty tier, personalized recommendations, early access to new apparel and fitness lines.</td></tr>
-            <tr><td class="seg-name"><strong>Affluent Premium Buyers</strong></td><td>Re-engage: in-store appointments, premium service, win-back offers after long gaps between purchases.</td></tr>
-            <tr><td class="seg-name"><strong>Family Value Shoppers</strong></td><td>Win on value: everyday low prices, family bundles, points on repeat necessities, easy in-store pickup.</td></tr>
+            <tr><td class="seg-name"><strong>Young Online Enthusiasts</strong></td><td>Grow the basket with social and mobile campaigns, bundles and free-shipping thresholds above their $62 average order.</td></tr>
+            <tr><td class="seg-name"><strong>Fashion-Forward Professionals</strong></td><td>Protect and grow them with a loyalty tier, personalized recommendations and early access to new apparel and fitness lines.</td></tr>
+            <tr><td class="seg-name"><strong>Affluent Premium Buyers</strong></td><td>Re-engage them with in-store appointments, premium service and win-back offers after long gaps between purchases.</td></tr>
+            <tr><td class="seg-name"><strong>Family Value Shoppers</strong></td><td>Win on value with everyday low prices, family bundles, points on repeat necessities and easy in-store pickup.</td></tr>
           </table>
         </div>
       </div>
@@ -221,35 +219,17 @@
 
     <section class="section">
       <div class="wrap">
-        <div class="section-head reveal">
-          <div class="section-num">Process</div>
-          <div>
-            <h2>How I worked <em class="serif-italic">with the AI.</em></h2>
-            <p>The assignment was as much about directing AI well as about the answer itself.</p>
-          </div>
-        </div>
-
-        <div class="tbl-wrap reveal">
-          <table class="prompt-table">
-            <tr><th>Step</th><th style="width:45%">My prompt</th><th>What the AI did</th></tr>
-            <tr><td>1</td><td>Uploaded the customer file: <q>Please identify 4 segments based on patterns in spending, income, and behavior.</q></td><td>Ran k-means (k = 4) on six standardized numeric variables and profiled each cluster’s averages, channel mix and top categories.</td></tr>
-            <tr><td>2</td><td>Asked it to label and describe each segment, then build the three required plots.</td><td>Named and described the four segments and built three scatter plots colored by segment, with averages marked.</td></tr>
-            <tr><td>3</td><td><q>Please ensure that this is ignoring column K from the file.</q></td><td>Confirmed the answer-key column wasn’t used to cluster, only as a check afterward (99 of 100 matched).</td></tr>
-            <tr><td>4</td><td>Asked for a summary deck, plus a slide documenting how I prompted it.</td><td>Built the presentation, including this prompting log.</td></tr>
-          </table>
-        </div>
-
-        <div class="split reveal" style="margin-top:72px">
-          <div class="split-label">What I took away</div>
+        <div class="split reveal">
+          <div class="split-label">What I learned</div>
           <div class="prose">
-            <p>Giving the AI the assignment one step at a time kept it on task, and it let me understand the data at each stage instead of accepting a finished answer I couldn’t explain. Step 3 mattered most: an answer key hidden in the data could have made the segments look better than they were, and asking that one question is what made the results trustworthy.</p>
-            <p class="muted" style="font-size:0.92rem">Note: after clustering, the AI borrowed three of the four segment names from the dataset’s reference labels.</p>
+            <p>AI made the math fast, but the valuable part was everything around it: deciding which measures mattered, checking that the results were honest and translating clusters into people. A segment only becomes useful once you can describe who’s in it and what they need.</p>
+            <p>I also learned to look for shortcuts in the data. A hidden answer key could have made the segments look better than they really were, and catching it is what made the results worth trusting.</p>
           </div>
         </div>
 
         <div class="next-project">
           <span class="eyebrow" style="margin:0">Next project</span>
-          <a class="title" href="admissions-dashboard.html">Graduate Admissions Executive Dashboard →</a>
+          <a class="title" href="dynamic-pricing.html">AI-Based Dynamic Pricing →</a>
         </div>
       </div>
     </section>

@@ -451,12 +451,12 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-t
 .figure figcaption .fig-num { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--maroon-soft); margin-bottom: 8px; display: block; }
 @media (max-width: 900px) { .figure-grid { grid-template-columns: 1fr; gap: 20px; } }
 
-table.prompt-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; font-size: 0.95rem; }
-.prompt-table th, .prompt-table td { padding: 16px 18px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line-soft); }
-.prompt-table tr:last-child td { border-bottom: 0; }
-.prompt-table th { background: var(--cream-2); font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--maroon-soft); }
-.prompt-table td:first-child { font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--maroon); width: 60px; }
-.prompt-table q { font-style: italic; }
+table.info-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; font-size: 0.95rem; }
+.info-table th, .info-table td { padding: 16px 18px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line-soft); }
+.info-table tr:last-child td { border-bottom: 0; }
+.info-table th { background: var(--cream-2); font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--maroon-soft); }
+.info-table td:first-child { font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--maroon); width: 60px; }
+.info-table q { font-style: italic; }
 
 /* ---------- Reveal on scroll ---------- */
 
@@ -469,7 +469,7 @@ table.prompt-table { width: 100%; border-collapse: separate; border-spacing: 0; 
 }
 .no-js .reveal { opacity: 1; transform: none; }
 
-.prompt-table td.seg-name { font-family: var(--sans); font-style: normal; font-size: 0.95rem; color: var(--ink); width: auto; }
+.info-table td.seg-name { font-family: var(--sans); font-style: normal; font-size: 0.95rem; color: var(--ink); width: auto; }
 code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.85em; background: var(--cream-2); padding: 1px 5px; border-radius: 4px; color: var(--maroon-ink); }
 
 .tl-points { margin: 0 0 4px; padding-left: 1.1em; }
@@ -478,3 +478,50 @@ code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.85em
 .toolkit { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
 .toolkit h4 { margin: 0; }
 .portrait img { object-position: center 30%; }
+
+/* ---------- Mid-size project cards ---------- */
+.card-mid { grid-column: span 2; padding: 0; overflow: hidden; }
+.card-mid .card-body { padding: 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.card-mid .card-visual { aspect-ratio: 16 / 10; background: var(--cream-2); border-bottom: 1px solid var(--line); overflow: hidden; }
+.card-mid .card-visual img { width: 100%; height: 100%; object-fit: cover; }
+.card-mid h3 { font-size: 1.45rem; }
+@media (max-width: 960px) { .card-mid { grid-column: span 1; } }
+
+/* ---------- Courses ---------- */
+.courses-two { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.course-panel { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; }
+.course-panel-next { background: transparent; border: 1px dashed var(--maroon-soft); }
+.panel-head { border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 6px; }
+.panel-head .eyebrow { margin-bottom: 8px; }
+.panel-head h3 { margin: 0; font-size: 2rem; font-weight: 500; }
+.course-list { list-style: none; margin: 0; padding: 0; }
+.course-list li { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; padding: 16px 0; border-bottom: 1px solid var(--line-soft); }
+.course-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.course-list h4 { margin: 0; font-size: 1.2rem; color: var(--maroon-ink); }
+.course-list .code { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em; color: var(--maroon-soft); white-space: nowrap; padding-top: 4px; }
+.course-list p { grid-column: 1 / -1; margin: 0; font-size: 0.93rem; color: var(--muted); }
+@media (max-width: 900px) { .courses-two { grid-template-columns: 1fr; } .course-panel { padding: 24px; } }
+
+/* ---------- Case study extras ---------- */
+.cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+.figure-wide img { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; width: 100%; }
+.figure-wide figcaption { margin-top: 14px; color: var(--muted); font-size: 0.95rem; max-width: 760px; }
+.figure-row { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.figure-row figure { margin: 0; }
+@media (max-width: 860px) { .figure-row { grid-template-columns: 1fr; } }
+.info-table td.task { font-family: var(--sans); font-style: normal; font-size: 0.95rem; color: var(--ink); width: 24%; font-weight: 600; }
+.recs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.rec { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+.rec .n { font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--maroon); margin: 0 0 6px; }
+.rec h4 { margin: 0 0 6px; }
+.rec p { margin: 0; font-size: 0.95rem; color: var(--muted); }
+@media (max-width: 860px) { .recs { grid-template-columns: 1fr; } }
+
+/* ---------- Tableau embed ---------- */
+.tableau-original { margin-top: 40px; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 28px; box-shadow: var(--shadow); }
+.to-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+.to-head h3 { margin: 0 0 4px; font-size: 1.7rem; }
+.to-head p { margin: 0; color: var(--muted); font-size: 0.95rem; max-width: 40em; }
+.tableau-frame { border: 1px solid var(--line-soft); border-radius: 12px; overflow: hidden; background: #fff; }
+.tableau-frame iframe { display: block; width: 100%; height: 860px; border: 0; }
+@media (max-width: 760px) { .tableau-original { padding: 18px; } .tableau-frame iframe { height: 940px; } }

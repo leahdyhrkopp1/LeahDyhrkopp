@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-Based Dynamic Pricing · Leah Dyhrkopp</title>
+  <meta name="description" content="Using machine learning to find the most profitable price for each customer, and how to use personalized pricing responsibly.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">LD</span>
+        <span class="brand-name">Leah Dyhrkopp</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#work" aria-current="page">Work</a></li>
+        <li><a href="index.html#courses">Courses</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="project-hero">
+      <div class="wrap">
+        <a class="back-link" href="index.html#work">← All work</a>
+        <p class="eyebrow">Case study · AI for Marketing</p>
+        <h1>AI-Based <em class="serif-italic">Dynamic Pricing</em></h1>
+        <p class="lede">What if every customer saw the price that made the most sense for them? In this exercise, I used AI to model demand for 200 customers over 16 weeks, find the most profitable price for each one and think through how a company could use personalized pricing without losing customers’ trust.</p>
+        <dl class="meta-row">
+          <div><dt>Course</dt><dd>AI for Marketing (MKTG 6247)</dd></div>
+          <div><dt>Method</dt><dd>Gradient boosting demand model</dd></div>
+          <div><dt>Data</dt><dd>3,200 customer-weeks, three segments</dd></div>
+          <div><dt>When</dt><dd>November 2026</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="split reveal">
+          <div class="split-label">The assignment</div>
+          <div class="prose">
+            <p>We were given weekly sales data for 200 customers in three segments (Value, Mainstream and Premium), including price, cost, loyalty, income and each customer’s willingness to pay. The exercise walked through seven steps, from exploring the data to recommending how to roll out AI-based pricing responsibly.</p>
+          </div>
+        </div>
+
+        <div class="split reveal">
+          <div class="split-label">What I did</div>
+          <div>
+            <ol class="steps">
+              <li>
+                <h4>Modeled demand</h4>
+                <p>I used AI to build a machine learning model that predicts how many units each customer buys at a given price. It predicted demand closely on customers it hadn’t seen before.</p>
+              </li>
+              <li>
+                <h4>Measured price sensitivity</h4>
+                <p>I calculated price elasticity for every customer-week to see how much demand drops when the price goes up, then compared the three segments.</p>
+              </li>
+              <li>
+                <h4>Found the best prices</h4>
+                <p>I tested every price from $10 to $22 in 50-cent steps and picked the one that earned the most profit for each customer-week.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-num">The results</div>
+          <div>
+            <h2>Personalized prices, <em class="serif-italic">16% more profit.</em></h2>
+            <p>All figures are model predictions compared with the model’s estimate at today’s prices.</p>
+          </div>
+        </div>
+
+        <div class="stat-row reveal">
+          <div class="stat"><div class="num">+16.2%</div><div class="label">Predicted profit, from $315.5K to $366.6K</div></div>
+          <div class="stat"><div class="num">$10–$22</div><div class="label">Range of optimal prices</div></div>
+          <div class="stat"><div class="num">62%</div><div class="label">Customer-weeks priced higher</div></div>
+          <div class="stat"><div class="num">29%</div><div class="label">Customer-weeks priced lower</div></div>
+        </div>
+
+        <div class="figure-row reveal" style="margin-top:40px">
+          <figure class="figure-wide">
+            <img src="pricing-elasticity.png" alt="Bar chart of average price elasticity by segment: Value mean −4.95 (median −2.05), Mainstream mean −2.09 (median −1.41), Premium mean −1.72 (median −1.27)." loading="lazy">
+            <figcaption><strong>Value customers are the most price-sensitive.</strong> A 1% price increase cuts their demand by about 2% (median), compared with 1.27% for Premium customers.</figcaption>
+          </figure>
+          <figure class="figure-wide">
+            <img src="pricing-profit.png" alt="Line chart of average profit per customer-week across prices from $10 to $22. Value peaks at $10.50, Mainstream at $15.50 and Premium at $21.00." loading="lazy">
+            <figcaption><strong>Each segment’s profit peaks at a different price.</strong> Value peaks at $10.50, Mainstream at $15.50 and Premium at $21.00, so one price for everyone leaves money on the table.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="split reveal">
+          <div class="split-label">What I found</div>
+          <div>
+            <ul class="findings">
+              <li><span class="big">01</span><p><strong>Segment sets the price level.</strong> Optimal prices averaged $10.90 for Value, $15.56 for Mainstream and $20.94 for Premium customers.</p></li>
+              <li><span class="big">02</span><p><strong>Willingness to pay fine-tunes it.</strong> Within the Value segment, customers with the highest willingness to pay were far less price-sensitive than those with the lowest.</p></li>
+              <li><span class="big">03</span><p><strong>Loyal customers would pay more.</strong> The model priced highly loyal Mainstream customers about $0.70 higher than less loyal ones, a “loyalty penalty” that could backfire if customers noticed.</p></li>
+              <li><span class="big">04</span><p><strong>Premium may have more room.</strong> 30% of Premium customer-weeks landed at the $22 cap, so their best price could be even higher.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-num">Recommendations</div>
+          <div>
+            <h2>Using AI pricing <em class="serif-italic">responsibly.</em></h2>
+          </div>
+        </div>
+        <div class="recs reveal">
+          <div class="rec"><p class="n">01</p><h4>Pilot, then scale with guardrails</h4><p>Test segment-level prices before personalizing, cap weekly price changes, keep prices above cost and test Premium prices above $22 in a small group first.</p></div>
+          <div class="rec"><p class="n">02</p><h4>Price on things you can explain</h4><p>Base prices on segment, cost and weekly events, not inferred income. Reward loyal customers instead of charging them more.</p></div>
+          <div class="rec"><p class="n">03</p><h4>Keep humans in the loop</h4><p>Review prices before launch, compare actual and predicted demand every week, check for fairness across groups and tell customers how prices are set.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="split reveal">
+          <div class="split-label">What I learned</div>
+          <div class="prose">
+            <p>The model was the easy part. The harder questions came after: Is a 16% gain real, or just a prediction? Should a loyal customer ever pay more than a new one? A model will happily optimize for profit, so it’s up to people to decide what’s fair.</p>
+            <p>This project connected directly to what I care about in responsible AI. Personalized pricing can work for both the business and the customer, but only with clear rules, testing and transparency built in from the start.</p>
+          </div>
+        </div>
+
+        <div class="next-project">
+          <span class="eyebrow" style="margin:0">Next project</span>
+          <a class="title" href="ai-tool-comparison.html">Which AI Tool, When? →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span data-year>2026</span> Leah Dyhrkopp</span>
+      <a href="index.html#contact">Get in touch</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
