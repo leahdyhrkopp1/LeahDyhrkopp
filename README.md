@@ -12,6 +12,7 @@ Plain HTML, CSS and JavaScript with no build step. Every file sits at the top le
 - `dynamic-pricing.html`: AI-Based Dynamic Pricing
 - `ai-tool-comparison.html`: Which AI Tool, When?
 - `ai-chatbot.html`: Building an AI Interview Coach
+- `bike-rentals.html`: Cleaning and Exploring Bike Rental Data (interactive charts)
 - `404.html`: Page-not-found page
 
 ## Supporting files
@@ -19,7 +20,9 @@ Plain HTML, CSS and JavaScript with no build step. Every file sits at the top le
 - `style.css`: All styles (maroon and cream colors are set at the top under `:root`)
 - `main.js`: Menu and scroll effects
 - `dashboard.js` and `admissions-data.js`: The interactive dashboard and its aggregated data
-- Images: `headshot.jpg`, `dashboard-preview.svg`, `tool-comparison.svg`, `plot-*.png`, `pricing-*.png`, `chatbot-*.jpg`
+- `bike.js` and `bike-data.js`: The bike rental charts and their data
+- `bike-rentals-hw5.ipynb` and `day_missing.csv`: My HW5 notebook and its data (the notebook loads the CSV from this repository, so it runs in Colab)
+- Images: `headshot.jpg`, `dashboard-preview.svg`, `tool-comparison.svg`, `bike-preview.svg`, `plot-*.png`, `pricing-*.png`, `chatbot-*.jpg`
 - `Leah-Dyhrkopp-Resume.pdf`: Résumé linked from the site
 
 ## Updating the site

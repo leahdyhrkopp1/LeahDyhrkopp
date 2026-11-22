@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cleaning and Exploring Bike Rental Data · Leah Dyhrkopp</title>
+  <meta name="description" content="A Python notebook that cleans a messy bike rental dataset and explores what drives daily ridership, with interactive charts.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">LD</span>
+        <span class="brand-name">Leah Dyhrkopp</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#work" aria-current="page">Work</a></li>
+        <li><a href="index.html#courses">Courses</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="project-hero">
+      <div class="wrap">
+        <a class="back-link" href="index.html#work">← All work</a>
+        <p class="eyebrow">Case study · Programming for Analytics</p>
+        <h1>Cleaning and Exploring <em class="serif-italic">Bike Rental Data</em></h1>
+        <p class="lede">Real data is messy. For this Python assignment, I was given two years of daily bike-share records with missing values and a few planted errors. My job was to find the problems, fix them and then dig into what actually makes people decide to ride.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://colab.research.google.com/github/leahdyhrkopp1/LeahDyhrkopp/blob/main/bike-rentals-hw5.ipynb" target="_blank" rel="noopener">Run my notebook in Colab <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="https://github.com/leahdyhrkopp1/LeahDyhrkopp/blob/main/bike-rentals-hw5.ipynb" target="_blank" rel="noopener">View the code on GitHub</a>
+        </div>
+        <dl class="meta-row">
+          <div><dt>Course</dt><dd>Programming for Analytics (ITOM 6253)</dd></div>
+          <div><dt>Tools</dt><dd>Python · pandas · seaborn · Plotly</dd></div>
+          <div><dt>Data</dt><dd>731 days of bike rentals, 2011–2012</dd></div>
+          <div><dt>When</dt><dd>Fall 2026</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="split reveal">
+          <div class="split-label">The assignment</div>
+          <div class="prose">
+            <p>The dataset tracks a bike-share system day by day: the weather, the season, whether it was a working day and how many casual and registered riders took out a bike. This version had gaps in seven columns and some values that couldn’t possibly be right. Before any chart could be trusted, the data had to be inspected, cleaned and checked.</p>
+          </div>
+        </div>
+
+        <div class="split reveal">
+          <div class="split-label">What I did</div>
+          <div>
+            <ol class="steps">
+              <li>
+                <h4>Inspected the data</h4>
+                <p>I checked every column for missing values and odd codes. Along the way I found that the dataset’s documentation had the seasons wrong, and I used the dates to work out the correct labels.</p>
+              </li>
+              <li>
+                <h4>Cleaned the outliers</h4>
+                <p>I flagged columns with extreme kurtosis, removed values far outside the normal range (beyond 2.1 times the IQR) and filled those gaps with each column’s mean.</p>
+              </li>
+              <li>
+                <h4>Explored with charts</h4>
+                <p>I visualized how weather, season and the type of day shape ridership, then rebuilt those charts here so you can explore them yourself.</p>
+              </li>
+            </ol>
+
+            <details class="code-details">
+              <summary>See the cleaning code</summary>
+<pre class="code-block"><code><span class="c"># Flag outliers beyond 2.1 × IQR and replace them with missing values</span>
+for col in cont_cols:
+    q1 = df[col].quantile(0.25)
+    q3 = df[col].quantile(0.75)
+    iqr = q3 - q1
+    lower = q1 - 2.1 * iqr
+    upper = q3 + 2.1 * iqr
+    is_outlier = (df[col] &lt; lower) | (df[col] &gt; upper)
+    if is_outlier.sum() &gt; 0:
+        df.loc[is_outlier, col] = np.nan
+        outlier_counts[col] = int(is_outlier.sum())
+
+<span class="c"># Fill only the columns that had outliers, using each column's new mean</span>
+for col in outlier_counts:
+    df[col] = df[col].fillna(df[col].mean())</code></pre>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="explore">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-num">Explore it</div>
+          <div>
+            <h2>The data, <em class="serif-italic">up close.</em></h2>
+            <p>These charts use the same data and cleaning steps as my notebook. Hover over any point for details, and use the buttons to switch views or filter.</p>
+          </div>
+        </div>
+
+        <div class="viz-stack">
+          <div class="viz-card reveal">
+            <div class="viz-head">
+              <div>
+                <p class="eyebrow">Step 1 · Cleaning</p>
+                <h3>Six impossible temperatures</h3>
+                <p>Temperature is stored on a 0 to 1 scale, but six days were recorded as high as 58.75. Switch between the raw and cleaned data to see the difference.</p>
+              </div>
+              <div class="seg" role="group" aria-label="Before or after cleaning">
+                <button type="button" data-clean="before" aria-pressed="true">Before</button>
+                <button type="button" data-clean="after" aria-pressed="false">After</button>
+              </div>
+            </div>
+            <div class="viz-body viz-body-side">
+              <div class="chart" id="chart-clean"></div>
+              <div class="viz-stat">
+                <div class="num" id="clean-kurt">162.45</div>
+                <div class="label" id="clean-kurt-label">Kurtosis before cleaning</div>
+                <p>Kurtosis measures how extreme a column’s outliers are. A normal distribution scores about 0.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="viz-card reveal">
+            <div class="viz-head">
+              <div>
+                <p class="eyebrow">Step 2 · Weather</p>
+                <h3>Warm, clear days bring riders out</h3>
+                <p>Each dot is one day. Click a weather type to show or hide it.</p>
+              </div>
+              <div class="legend" id="legend-temp" aria-label="Filter by weather"></div>
+            </div>
+            <div class="share-wrap">
+              <p class="share-title">Share of all rentals by weather</p>
+              <div class="share-bar" id="weather-share"></div>
+              <div class="share-labels" id="weather-share-labels"></div>
+            </div>
+            <div class="chart" id="chart-temp"></div>
+          </div>
+
+          <div class="viz-row">
+            <div class="viz-card reveal">
+              <div class="viz-head">
+                <div>
+                  <p class="eyebrow">Step 3 · Season</p>
+                  <h3>Winter is the slow season</h3>
+                  <p>Hover over a season to see its typical range of daily rentals.</p>
+                </div>
+              </div>
+              <div class="chart" id="chart-season"></div>
+            </div>
+
+            <div class="viz-card reveal">
+              <div class="viz-head">
+                <div>
+                  <p class="eyebrow">Step 4 · Riders</p>
+                  <h3>Commuters vs. weekend riders</h3>
+                  <p>Click a day type to show or hide it.</p>
+                </div>
+                <div class="legend" id="legend-riders" aria-label="Filter by day type"></div>
+              </div>
+              <div class="chart" id="chart-riders"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="split reveal">
+          <div class="split-label">What I found</div>
+          <div>
+            <ul class="findings">
+              <li><span class="big">01</span><p><strong>A few bad values can distort everything.</strong> Six impossible temperatures pushed the column’s kurtosis to 162. After cleaning, it dropped to −1.06, a realistic spread with no extreme values.</p></li>
+              <li><span class="big">02</span><p><strong>Don’t trust the documentation blindly.</strong> The dataset’s notes said season code 1 meant spring, but the dates showed it covers December 21 to March 20. Code 1 is actually winter.</p></li>
+              <li><span class="big">03</span><p><strong>Weather drives ridership.</strong> Clear days account for 68% of all rentals. Light rain or snow days make up just 1%, across only 21 days.</p></li>
+              <li><span class="big">04</span><p><strong>Season matters too.</strong> A typical winter day had about 2,200 rentals, compared with about 5,300 on a typical summer day.</p></li>
+              <li><span class="big">05</span><p><strong>Two kinds of riders.</strong> Registered riders averaged 3,969 rentals on working days and 2,971 on days off. Casual riders did the opposite, doubling from 609 to 1,225 on non-working days.</p></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="split reveal">
+          <div class="split-label">What I learned</div>
+          <div class="prose">
+            <p>Cleaning came first, and it mattered more than any chart. Kurtosis worked like a smoke alarm, pointing me straight to the column with problems before I ever plotted it. Checking the season codes against the actual dates taught me to verify what a dataset claims instead of taking it at face value.</p>
+            <p>It also showed me why writing analysis as code matters. Anyone can rerun my notebook and get the same answer, which is a big part of what makes the results trustworthy.</p>
+          </div>
+        </div>
+
+        <div class="next-project">
+          <span class="eyebrow" style="margin:0">Next project</span>
+          <a class="title" href="admissions-dashboard.html">Graduate Admissions Executive Dashboard →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span data-year>2026</span> Leah Dyhrkopp</span>
+      <a href="index.html#contact">Get in touch</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="bike-data.js"></script>
+  <script src="bike.js"></script>
+</body>
+</html>
