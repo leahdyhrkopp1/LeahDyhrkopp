@@ -477,7 +477,7 @@ code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.85em
 .tl-points li::marker { color: var(--maroon); }
 .toolkit { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
 .toolkit h4 { margin: 0; }
-.portrait img { object-position: center 30%; }
+.portrait img { object-position: center top; }
 
 /* ---------- Mid-size project cards ---------- */
 .card-mid { grid-column: span 2; padding: 0; overflow: hidden; }
